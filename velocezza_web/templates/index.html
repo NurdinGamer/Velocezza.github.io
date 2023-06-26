@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VELOCEZZA</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://fonts.cdnfonts.com/css/a4-speed" rel="stylesheet">
+</head>
+<body class="website-background">
+    <div class="background">
+        <div class="brand-section">
+            <h1 class="brand-name">VELOCEZZA</h1>
+            <p class="motto">"veh-loh-CHEZZ-ah." is an Italian word that can be translated<br>into English as "speed," "swiftness," or "quickness."</p>
+        </div>
+        <div>
+            <a href="contact.html" class="contact-button">Contact US</a>
+        </div>
+        <div class="menu-section">
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="/products">Products</a></li>
+                <li><a href="#">About US</a></li>
+                <li><a href="#">Social Media</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.menu').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

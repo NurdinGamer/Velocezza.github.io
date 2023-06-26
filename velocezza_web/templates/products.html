@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Products</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/products.css') }}">
+</head>
+<body class="product-background">
+    <div class="background">
+        <div class="product-container">
+            {% for product in products %}
+            <div class="product">
+                <h1>{{ product.name }}</h1>
+                <p>Price: Rp{{ product.price }}</p>
+                <img src="{{ url_for('static', filename='images/' + product.image) }}" alt="{{ product.name }}">
+                <a class="marketplace-button" href="https://www.tokopedia.com/velocezza/midnight-cruise-tshirt-velocezza" target="_blank">Buy Now</a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
